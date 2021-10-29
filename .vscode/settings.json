@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "stack",
+        "college"
+    ],
+    "files.associations": {
+        "C1.C": "cpp"
+    }
+}
