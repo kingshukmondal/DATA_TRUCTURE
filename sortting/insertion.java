@@ -12,7 +12,7 @@ public class insertion {
             System.out.print("Arr["+(i+1)+"]: ");
             arr[i]=sc.nextInt();
         }
-
+        System.out.println("***************************");
         for(int i=1;i<n;i++)
         {
             int current=arr[i];
@@ -23,7 +23,14 @@ public class insertion {
                 j--;
             }
             arr[j+1]=current;
+            System.out.print("\tPass "+(i)+"\t\t");
+            for(int k:arr)
+            {
+                System.out.print(k+" ");
+            }
+            System.out.println();
         }
+        System.out.println("***************************");
                 for(int k:arr)
                 {
                     System.out.print(k+" ");
