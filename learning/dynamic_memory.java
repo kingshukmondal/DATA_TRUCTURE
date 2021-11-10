@@ -1,35 +1,34 @@
 package learning;
-class phone
+
+import org.w3c.dom.ls.LSOutput;
+
+interface a
 {
-    void turrnon()
-    {
-        System.out.println("the phone is turned on ");
+
+    default   void meth1(){
+        System.out.println("hello");
     }
 
-    void cancall()
-    {
-        System.out.println("Yes i can call");
-    }
 }
 
-class smartphone extends phone
+interface c
 {
-    @Override
-    void turrnon()
-    {
-        System.out.println("Yes the smartphone is turned on");
+    default   void meth1(){
+        System.out.println("hello two");
     }
 
-    void playgame()
-    {
-        System.out.println("PUBG cholbena");
-    }
 }
+
+class  b implements a,c
+{
+    public void meth1()
+    {
+       c.super.meth1();
+    }
+
+}
+
 public class dynamic_memory {
     public static void main(String[] args) {
-        phone nokia=new smartphone();
-        nokia.cancall();
-        nokia.turrnon();
-
     }
 }

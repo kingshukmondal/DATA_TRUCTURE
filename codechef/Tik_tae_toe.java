@@ -1,12 +1,12 @@
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Tik_tae_toe {
     static char[][] arr =new char[3][3];
     static int  chcker[]=new int[9];
-    static char s;
+    static char s='D';
+
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -20,7 +20,9 @@ public class Tik_tae_toe {
         }
 
         printArr(arr);
+
         System.out.println("**************************");
+        System.out.println("\t\t^KEYS^");
         System.out.println("0->00\t1->01\t2->02");
         System.out.println("3->10\t4->11\t5->12");
         System.out.println("6->20\t7->21\t8->22");
@@ -42,13 +44,7 @@ public class Tik_tae_toe {
             else
             {
                 setArray(p,'X');
-                if(checkone()<2)
-                {
-                    System.out.println("Draw");
-                    printArr(arr);
-                    break;
-                }
-                if(!winCase(arr))
+                if(!winCase(arr)  && checkone()!=0)
                 {
                     while (true)
                     {
@@ -64,8 +60,15 @@ public class Tik_tae_toe {
             }
 
             printArr(arr);
+            if(checkone()==0 && !winCase(arr))
+            {
+                System.out.println("Draw");
+                printArr(arr);
+                break;
+            }
         }
         System.out.println(s);
+
     }
 
     public static int checkone()
@@ -156,7 +159,7 @@ public class Tik_tae_toe {
             }
 
             else if (arr[0][2] == arr[1][2] && arr[1][2] == arr[2][2] && arr[1][2] !=' ') {
-            s = arr[1][1];
+            s = arr[1][2];
             return true;
              }
             else if (arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2] && arr[1][1] !=' ') {
