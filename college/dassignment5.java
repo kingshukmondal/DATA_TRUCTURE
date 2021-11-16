@@ -1,11 +1,11 @@
 package college;
 
-class  Vehicle
+class  Vehicles
 {
     int a,b,c;
 }
 
-class Car extends Vehicle
+class Carone extends Vehicles
 {
     public void setData(int a,int b,int c)
     {
@@ -23,7 +23,7 @@ class Car extends Vehicle
 }
 public class dassignment5 {
     public static void main(String[] args) {
-        Car c=new Car();
+        Carone c=new Carone();
         c.setData(10,132,23);
         c.printData();
     }

@@ -15,8 +15,6 @@ public class asighnment1 {
             System.out.print(sum+" ");
             a=b;
             b=sum;
-
         }
-
     }
 }

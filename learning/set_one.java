@@ -1,37 +1,49 @@
 package learning;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
-class hello
+class parent
 {
-    public void hello1(hello s)
+    public void one()
     {
-        System.out.println("hello java");
+        System.out.println("meth 1 inside parent ");
     }
 
-    public void master()
+    public static void two()
     {
-        hello1(this);
+        System.out.println("Meth 2 inside parent");
+    }
+
+    public void three()
+    {
+        System.out.println("Meth 3");
+    }
+}
+
+class child extends parent
+{
+    @Override
+    public void one()
+    {
+        System.out.println("meth 1 inside child ");
+    }
+
+    public static void two()
+    {
+        System.out.println("Meth 2 inside child");
+    }
+
+    public void four()
+    {
+        System.out.println("Meh in ch");
     }
 }
 public class set_one {
     public static void main(String[] args) {
-        int arr[]=new int[5];
-        Scanner sc=new Scanner(System.in);
 
-            try {
-                for(int i=0;i<5;i++)
-                    arr[i]=sc.nextInt();
-            } catch (Exception e) {
-                System.out.println("Errror!!");
-                System.out.println(e.getMessage());
-            }
+        parent p=new child();
+        p.three();
 
-       finally {
-                System.out.println("Dhamnna sohome");
-            }
-        }
+    }
 
     }
 
