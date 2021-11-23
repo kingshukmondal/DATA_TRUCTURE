@@ -1,5 +1,6 @@
 package aapn_college;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -29,12 +30,29 @@ public class four {
             check[s]++;
         }
 
+        ArrayList<Character> ar=new ArrayList<>();
+        Boolean s=true;
         for(int i=0;i<check.length;i++)
         {
             if(check[i]!=0 && check[i]%2!=0)
             {
-                System.out.println((char) i);
-                break;
+                ar.add((char)i);
+                s=false;
+            }
+        }
+
+        if (s)
+        {
+            System.out.println("All are even");
+        }
+        else {
+            for(int i=0;i<arr.length;i++)
+            {
+                if(ar.contains(arr[i]))
+                {
+                    System.out.println(arr[i]);
+                    break;
+                }
             }
         }
     }
