@@ -29,31 +29,21 @@ public class four {
             int s=arr[i];
             check[s]++;
         }
-
-        ArrayList<Character> ar=new ArrayList<>();
         Boolean s=true;
-        for(int i=0;i<check.length;i++)
+        for(int i=0;i<n;i++)
         {
-            if(check[i]!=0 && check[i]%2!=0)
+            int k=check[arr[i]];
+            if(k%2!=0)
             {
-                ar.add((char)i);
+                System.out.println(arr[i]);
                 s=false;
+                break;
             }
         }
 
         if (s)
         {
             System.out.println("All are even");
-        }
-        else {
-            for(int i=0;i<arr.length;i++)
-            {
-                if(ar.contains(arr[i]))
-                {
-                    System.out.println(arr[i]);
-                    break;
-                }
-            }
         }
     }
 }

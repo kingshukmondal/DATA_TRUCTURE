@@ -10,6 +10,18 @@ public class three {
         int tc = sc.nextInt();
         int cs=0;
         while (cs++<tc) {
+            /*
+4
+8
+1 2 0 7 2 0 2 0
+6
+4 8 15 16 23 42
+9
+3 1 4 1 5 9 2 6 5
+6
+9 9 9 9 9 9
+ */
+
             int n = sc.nextInt();
             int arr[] = new int[n];
             for (int i = 0; i < n; i++) {
@@ -45,15 +57,3 @@ public class three {
         }
     }
 }
-
-/*
-4
-8
-1 2 0 7 2 0 2 0
-6
-4 8 15 16 23 42
-9
-3 1 4 1 5 9 2 6 5
-6
-9 9 9 9 9 9
- */
