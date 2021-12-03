@@ -4,31 +4,31 @@ import java.util.Scanner;
 //145279886
 public class strin {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        String str=sc.nextLine();
-        String str1="",newstr="";
-
-        if(str.length()%2==0)
+        try
         {
-            for (int i = 0; i < str.length(); )
-            {
-                str1 = str.substring(i, i + 2);
-                newstr = newstr + largenum(str1);
-                i += 2;
-            }
-        }
+            Scanner sc = new Scanner(System.in);
+            String str = sc.nextLine();
+            String str1 = "", newstr = "";
 
-        else
-        {
-            for (int i = 0; i < str.length()-1; )
-            {
-                str1 = str.substring(i, i + 2);
-                newstr = newstr + largenum(str1);
-                i += 2;
+            if (str.length() % 2 == 0) {
+                for (int i = 0; i < str.length(); ) {
+                    str1 = str.substring(i, i + 2);
+                    newstr = newstr + largenum(str1);
+                    i += 2;
+                }
+            } else {
+                for (int i = 0; i < str.length() - 1; ) {
+                    str1 = str.substring(i, i + 2);
+                    newstr = newstr + largenum(str1);
+                    i += 2;
+                }
+                newstr = newstr + str.charAt(str.length() - 1);
             }
-            newstr=newstr+str.charAt(str.length()-1);
+            System.out.println(newstr);
         }
-        System.out.println(newstr);
+        finally {
+
+        }
 
     }
 

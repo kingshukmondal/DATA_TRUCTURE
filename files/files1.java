@@ -5,15 +5,28 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class files1 {
-    public static void main(String[] args) throws FileNotFoundException {
-        File f=new File("G:\\DATA STRUCTURE\\files\\text.txt");
-        Scanner sc=new Scanner(f);
-        while (sc.hasNextLine())
-        {
-            String line =sc.nextLine();
-            System.out.println(line);
+    public static void main(String[] args) {
+        double i;
+        char j = 'b';
+
+        switch (j) {
+            case 'a':
+            case 'A':
+                i = 7.5;
+                break;
+            case 'b':
+            case 'B':
+                i = 5.5;
+                break;
+
+            case 'c':
+            case 'C':
+                i = 2.5;
+                break;
+
+            default:
+                i = 0.5;
         }
-
-
+        System.out.println(i);
     }
 }
