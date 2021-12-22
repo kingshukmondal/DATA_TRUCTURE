@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class prog_one {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        Connection  con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hello1","root","root");
+        Connection  con=DriverManager.getConnection(",oZ","root","root");
         Statement st=con.createStatement();
         ResultSet rs =st.executeQuery("select * from emp");
 

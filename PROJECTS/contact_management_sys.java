@@ -73,7 +73,7 @@ public class contact_management_sys {
         boolean flag=false;
         while (rs.next())
         {
-            if(rs.getString(2).startsWith(s))
+            if(rs.getString(2).contains(s))
             {
                 flag=true;
                 f.format("%4s %15s %15s\n", rs.getInt(1), rs.getString(2), rs.getString(3));
@@ -83,6 +83,7 @@ public class contact_management_sys {
         if(!flag)
         {
             System.out.println("No Result found!!");
+            return;
         }
         System.out.println(f);
         System.out.println("/***************************/");
@@ -124,7 +125,7 @@ public class contact_management_sys {
             }
                 break;
             case 2:
-                System.out.print("Enter the name ::");
+                System.out.print("Enter the Number ::");
                 sc.nextLine();
                 String p1=sc.nextLine();
                 String sql = "UPDATE contact SET Number =? WHERE id=?";
