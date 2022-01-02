@@ -2,7 +2,7 @@ package college;
 
 import java.util.Scanner;
 
-class Box
+class Boxs
 {
     private int length,breadth,height;
 
@@ -27,7 +27,7 @@ public class cassignemnt19 {
         int bre=sc.nextInt();
         int hei=sc.nextInt();
 
-        Box b=new Box();
+        Boxs b=new Boxs();
         b.setDimension(len,bre,hei);
         b.showDimension();
     }

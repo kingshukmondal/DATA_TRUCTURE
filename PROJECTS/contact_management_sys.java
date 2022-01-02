@@ -130,6 +130,7 @@ public class contact_management_sys {
                 String p1=sc.nextLine();
                 String sql = "UPDATE contact SET Number =? WHERE id=?";
                 PreparedStatement statement = con.prepareStatement(sql);
+
                 statement.setString(1, p1);
                 statement.setString(2, String.valueOf(s));
                 statement.executeUpdate();
